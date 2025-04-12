@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To My Love 💖</title>
+  <style>
+    /* === Global Styles === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    /* === Header Section === */
+    header {
+      padding: 80px 20px 40px;
+      background-color: #fff5f8;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #777;
+    }
+
+    /* === Floating Image Section === */
+    .image-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .image-container img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* === Floating Animation === */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* === Fade In on Scroll === */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* === Quotes Section === */
+    .quotes {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .quote {
+      font-size: 1.4rem;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    /* === Heart Animation === */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: floatHeart 8s infinite ease-in;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        bottom: -10%;
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(30px) rotate(360deg);
+      }
+    }
+
+    /* === Section: Memories === */
+    .memories {
+      background: #fff0f5;
+    }
+
+    .memory-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .memory-card img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .memory-caption {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* === Section: Feelings === */
+    .feelings {
+      background: #fff;
+    }
+
+    .feelings p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    /* === Section: Promise === */
+    .promise {
+      background: #ffe4e1;
+    }
+
+    .promise ul {
+      list-style: none;
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.2rem;
+      padding: 0;
+    }
+
+    .promise li {
+      padding: 15px;
+      border-bottom: 1px solid #f9cdd0;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+      font-style: italic;
+      color: #777;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .feelings p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div id="hearts-container"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>To The Queen of My Heart 👑</h1>
+    <p class="subtitle">Every heartbeat is a reminder that I love you.</p>
+  </header>
+
+  <!-- Image Section -->
+  <div class="image-container fade">
+    <img src="8.jpg" alt="Your Beautiful Smile" />
+  </div>
+
+  <!-- Quotes Section -->
+  <section class="quotes fade">
+    <div class="quote">"You walked into my life like a beautiful dream and made it a reality."</div>
+    <div class="quote">"In your arms, I found my forever."</div>
+    <div class="quote">"You're the poem my heart recites every day."</div>
+    <div class="quote">"Even in silence, your presence is the loudest melody to my soul."</div>
+  </section>
+
+  <!-- Memories Section -->
+  <section class="memories fade">
+    <h2>Our Memories 📸</h2>
+    <div class="memory-card">
+      <img src="3.jpg" alt="Memory 1">
+      <p class="memory-caption">That unforgettable smile on our picnic date ❤️</p>
+    </div>
+    <div class="memory-card">
+      <img src="6.jpg" alt="Memory 2">
+      <p class="memory-caption">The day we laughed until it hurt 😊</p>
+    </div>
+  </section>
+
+  <!-- Feelings Section -->
+  <section class="feelings fade">
+    <h2>My Feelings 🌹</h2>
+    <p>
+      Every time I see your face, I feel lucky. Your smile melts away my worries, and your voice calms the storms in my mind. You are the calm in my chaos, the joy in my sadness, and the love of my life. If I could give you one thing, it would be the ability to see yourself through my eyes — only then would you realize how truly special you are.
+    </p>
+  </section>
+
+  <!-- Promise Section -->
+  <section class="promise fade">
+    <h2>My Promise 💍</h2>
+    <ul>
+      <li>I promise to love you endlessly, unconditionally.</li>
+      <li>I promise to support you in every dream you chase.</li>
+      <li>I promise to hold your hand through all seasons of life.</li>
+      <li>I promise to never let a day go without reminding you how special you are.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Made with infinite love 💖 by Harsh Bhimra
+  </footer>
+
+  <!-- Scroll Fade Script + Heart Generator -->
+  <script>
+    const faders = document.querySelectorAll('.fade');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Floating Hearts Generator
+    const heartsContainer = document.getElementById('hearts-container');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+
+</body>
+</html>

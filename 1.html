@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Love ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffccd5, #ffe4e1);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    .quotes {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .quote {
+      font-size: 1.4rem;
+      margin: 50px 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .quote.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>For the Love of My Life Miss Snehu 💖</h1>
+  </header>
+
+  <div class="image-container">
+    <img src= 4.jpg alt="Her Beautiful Smile">
+  </div>
+
+  <section class="quotes">
+    <div class="quote">"You are the sunshine that lights up my world."</div>
+    <div class="quote">"With you, every moment feels like a fairytale."</div>
+    <div class="quote">"Loving you is the best thing that ever happened to me."</div>
+    <div class="quote">"Your smile is my favorite sight, your voice is my favorite sound."</div>
+  </section>
+
+  <footer>
+    Made with endless love ❤️ by Harsh
+  </footer>
+
+  <script>
+    const quotes = document.querySelectorAll('.quote');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+
+    quotes.forEach(quote => {
+      observer.observe(quote);
+    });
+  </script>
+</body>
+</html>

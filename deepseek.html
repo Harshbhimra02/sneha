@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eternal Love for Snehu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #ffe6f2;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            background: #ff3385;
+            position: relative;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .content-section {
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .photo-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: float 3s ease-in-out infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .quote-box {
+            max-width: 500px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #ff3385;
+        }
+
+        .quote {
+            font-size: 1.4em;
+            color: #660033;
+            line-height: 1.6;
+            font-style: italic;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-section:nth-child(2) { animation-delay: 0.5s; }
+        .content-section:nth-child(3) { animation-delay: 1s; }
+        .content-section:nth-child(4) { animation-delay: 1.5s; }
+
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+            .photo-container {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Love for Snehu</h1>
+        <div class="heart">❤️</div>
+    </div>
+
+    <div class="content-section" style="background: #fff0f6;">
+        <div class="photo-container" style="background-image: url(1.jpg)"></div>
+        <div class="quote-box">
+            <p class="quote">"In your eyes, I found my home. In your heart, I found my forever."</p>
+        </div>
+    </div>
+
+    <div class="content-section" style="background: #ffd9e6;">
+        <div class="quote-box">
+            <p class="quote">"Every moment with you is like a beautiful dream I never want to wake up from."</p>
+        </div>
+        <div class="photo-container" style="background-image: url(3.jpg)"></div>
+    </div>
+
+    <div class="content-section" style="background: #ffe6f2;">
+        <div class="photo-container" style="background-image: url(6.jpg)"></div>
+        <div class="quote-box">
+            <p class="quote">"You're the missing piece I never knew I needed, completing me in every way."</p>
+        </div>
+    </div>
+
+    <div class="content-section" style="background: #ffccff;">
+        <div class="quote-box">
+            <p class="quote">"My love for you grows stronger with each passing moment, deeper with every heartbeat."</p>
+        </div>
+        <div class="photo-container" style="background-image: url(8.jpg)"></div>
+    </div>
+</body>
+</html>
